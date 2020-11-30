@@ -11,7 +11,6 @@ def primo(numero):
     for i in range (2,numero):
         if numero % i == 0:
             return (str(numero) + " No es primo")
-            break
     else:
         return (str(numero) + " es primo")
 
