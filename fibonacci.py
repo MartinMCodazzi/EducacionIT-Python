@@ -1,3 +1,12 @@
+"""
+Clase 2 - 28/11/2020
+Ejercicio  Sucesión de Fibonacci
+EducacionIT - Prof. Luciano Pueyo
+
+Martin Nahuel Muñoz Codazzi
+29/11/2020
+
+"""
 def fibo(iteraciones):
     a = 0
     b = 1
