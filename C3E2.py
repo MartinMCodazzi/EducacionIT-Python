@@ -13,6 +13,7 @@ def lecturaDiccionario():
     with open ("archivoC3E2.txt","r") as archivo:
         for elemento in archivo:
             txt = archivo.readline()
+            txt = txt.replace(":","")
             txt = txt.split()
             diccionario.update({txt[0]:txt[1]})
     return(diccionario)
