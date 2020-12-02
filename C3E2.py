@@ -6,19 +6,30 @@ EducacionIT - Prof. Luciano Pueyo
 Martin Nahuel Muñoz Codazzi
 30/11/2020
 
+v0.2 2/12/2020
+
 """
+# Haciéndolo así, estoy leyendo dos veces los mismos datos,
+# quizás haya otra forma más eficiente. A nivel S.O., no me parece tan mal
+# porque liberás el archivo bastante rápido, pero a nivel RAM,
+# cargás todo el archivo en memoria... Aunque en R, se hace así XD
+
 import sys
 
 diccionario = {} #Si no lo creo ahora, luego dará error
 
 def lecturaDiccionario(archivo = "archivoC3E2.txt"):
     with open (archivo,"r") as archivo:
-        for elemento in archivo:            #Para leer hasta EOF
-            txt = archivo.readline()        #leo una línea
-            txt = txt.replace(":","")       #cambio el ":" por Vacío
-            txt = txt.split()               #Divido ambos términos, generando
-                                            #Una lista de dos elementos
-            diccionario.update({txt[0]:txt[1]})
+        bruto = archivo.read() # leo en bruto todo el archivo
+        bruto = bruto.replace(" ","") #elimino espacios por primera vez
+        bruto = bruto.split("\n") #Separo por saltos de linea
+        bruto.pop() #con esto elimino la basura que deja el comando anterior
+
+        for elemento in bruto:
+            #creo una lista de dos elementos por cada elemento
+            temporal = elemento.split(":")
+            diccionario.update({temporal[0]:temporal[1]})
+
     return(diccionario)
 
 diccionario = lecturaDiccionario()
