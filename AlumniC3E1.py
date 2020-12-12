@@ -19,7 +19,7 @@ paises = {
 while True:
 
     entradaPais = input("Ingrese el código de pais, o salir, para salir: ")
-    if entradaPais == "salir" or entradaPais == "Salir":
+    if entradaPais.lower() == "salir": #Captura "Salir", "SaLiR", etc.
         print("Hasta Luego")
         break
     else:
