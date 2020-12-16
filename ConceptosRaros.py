@@ -10,4 +10,6 @@ def cuadrados():
     resultado = [valor**2 for valor in range(1,11)]
     print(resultado)
 
-sumaLambda = lambda a,b: a + b   
+sumaLambda = lambda a,b: a + b
+
+separador = lambda: "*" * 25   
