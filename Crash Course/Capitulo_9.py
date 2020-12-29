@@ -162,3 +162,16 @@ root.describe_user()
 
 root.privil.mostrar_privilegios()
 # jajaja, que matete!
+
+## EJERCICIO 9-13 ##
+from random import randint
+
+class Dado:
+    def __init__(self,lados=6):
+        self.lados= lados
+
+    def girar(self):
+        return randint(1,self.lados)
+
+dado=Dado()
+print(dado.girar())
