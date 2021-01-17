@@ -175,3 +175,5 @@ class Dado:
 
 dado=Dado()
 print(dado.girar())
+
+1234
